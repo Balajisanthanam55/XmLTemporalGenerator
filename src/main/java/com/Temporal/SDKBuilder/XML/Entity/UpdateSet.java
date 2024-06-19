@@ -8,7 +8,10 @@ import java.util.List;
 
 @Data
 public class UpdateSet {
-    @JacksonXmlProperty(localName = "item")
+    @JacksonXmlProperty(localName = "unload_date")
+    private String unloadDate;
+
+    @JacksonXmlProperty(localName = "sys_update_xml")
     @JacksonXmlElementWrapper(useWrapping = false)
     private List<UpdateItem> items;
 }
